@@ -1,6 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
+import java.util.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Stack;
 import java.awt.Color;
 import javax.swing.JTextPane;
 import java.awt.Canvas;
@@ -18,6 +19,16 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class GUI extends JFrame {
+	
+	static Stack customer_stack = new Stack();
+	static Stack user_stack = new Stack();
+	static Stack play_stack = new Stack();
+	static Stack seat_stack = new Stack();
+	
+	public static void user_creation(String user_name, String password) {
+		User user = new User(user_name,password);
+		user_stack.push(user);
+	}
 
 	private JPanel contentPane;
 	private JPasswordField passwordField;
@@ -57,7 +68,23 @@ public class GUI extends JFrame {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				textField.getText();
+				
+				User loginuser = new User(textField.getText(),passwordField.getText());
+		    	boolean isUser=false;
+		    	
+		    	while(isUser==false) {
+		    		isUser=loginuser.loggedIn(user_stack, loginuser);
+		    		if(isUser==true) {
+			    		page2();
+			    	}
+			    	else if(isUser==false) {
+			    		JLabel err = new JLabel("ERROR");
+			    		err.setFont(new Font("Comic Sans MS", Font.BOLD, 19));
+			    		err.setBounds(236, 205, 126, 30);
+			    		contentPane.add(err);
+			    	}
+		    		
+		    	}
 			}
 		});
 		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 17));
@@ -101,10 +128,12 @@ public class GUI extends JFrame {
 		contentPane.add(txtpnTheatreManagementSystem);
 		
 		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Comic Sans MS", Font.PLAIN, 17));
 		passwordField.setBounds(372, 246, 313, 30);
 		contentPane.add(passwordField);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Comic Sans MS", Font.PLAIN, 17));
 		textField.setBounds(372, 209, 313, 30);
 		contentPane.add(textField);
 		textField.setColumns(10);
