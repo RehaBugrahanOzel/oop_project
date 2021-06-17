@@ -18,6 +18,8 @@ import java.awt.Canvas;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 public class GUI extends JFrame {
@@ -77,7 +79,7 @@ public class GUI extends JFrame {
 		    	while(isUser==false) {
 		    		isUser=loginuser.loggedIn(user_stack, loginuser);
 		    		if(isUser==true) {
-			    		//page2
+		    			
 			    	}
 			    	else if(isUser==false) {
 			    		JOptionPane.showMessageDialog(null, "Eggs are not supposed to be green.");
