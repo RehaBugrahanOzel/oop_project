@@ -12,7 +12,7 @@ public class Customer {
 	boolean isExist;
 	boolean isMember;
 	
-	Stack s = new Stack();
+	
 	
 	public Customer(String nameSurname, int phoneNumber, String emailAddress, int age, boolean isStudent, int memberNo, boolean isExist) {
 		this.nameSurname = nameSurname;

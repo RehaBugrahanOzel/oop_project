@@ -10,7 +10,7 @@ public class Management {
 		User user = new User(user_name,password);
 		user_stack.push(user);
 	}
-	public static void test() {
+	public static void page1() {
 		Scanner myObj = new Scanner(System.in);
 	    System.out.println("1-Sign up");
 	    System.out.println("2-Log in");
@@ -37,7 +37,7 @@ public class Management {
 	    		isUser=loginuser.loggedIn(user_stack, loginuser);
 	    		if(isUser==true) {
 		    		System.out.println("You are successfully logged in");
-		    		////BURAYA FONKSÝYON ÇAÐRILCAK ANA ÝÞLEMLER ÝÇÝN
+		    		page2();
 		    	}
 		    	else if(isUser==false) {
 		    		System.out.println("Wrong password or username");
@@ -55,13 +55,18 @@ public class Management {
 	    	loginuser.removeUser(loginuser,user_stack);
 	    	System.out.println("User has been removed");
 	    }
-	    
-	    
-		
-		
-		
-		
-		
 	}
+	 public static void page2() {
+	    	
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+	    }
 	
 }
