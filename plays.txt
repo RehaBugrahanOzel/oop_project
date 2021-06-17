@@ -1,0 +1,11 @@
+Show Name;Day;Month;Year;Hour;Minute;HallName
+The Phantom of The Opera;3;7;2021;20;30;Opera Hall
+The Phantom of The Opera;10;7;2021;20;30;Opera Hall
+The Phantom of The Opera;17;7;2021;20;30;Opera Hall
+The Little Mermaid;2;7;2021;15;30;Kids Hall
+The Little Mermaid;9;7;2021;15;30;Kids Hall
+The Little Mermaid;16;7;2021;15;30;Kids Hall
+Romeo and Juliet;4;7;2021;19;30;Main Hall
+Romeo and Juliet;11;7;2021;19;30;Main Hall
+Romeo and Juliet;18;7;2021;19;30;Main Hall
+

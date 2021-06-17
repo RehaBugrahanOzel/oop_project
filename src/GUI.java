@@ -1,3 +1,4 @@
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.util.*;
@@ -15,6 +16,7 @@ import java.awt.Color;
 import javax.swing.JTextPane;
 import java.awt.Canvas;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -75,13 +77,10 @@ public class GUI extends JFrame {
 		    	while(isUser==false) {
 		    		isUser=loginuser.loggedIn(user_stack, loginuser);
 		    		if(isUser==true) {
-			    		page2();
+			    		//page2
 			    	}
 			    	else if(isUser==false) {
-			    		JLabel err = new JLabel("ERROR");
-			    		err.setFont(new Font("Comic Sans MS", Font.BOLD, 19));
-			    		err.setBounds(236, 205, 126, 30);
-			    		contentPane.add(err);
+			    		JOptionPane.showMessageDialog(null, "Eggs are not supposed to be green.");
 			    	}
 		    		
 		    	}
@@ -97,6 +96,8 @@ public class GUI extends JFrame {
 		btnSignUp.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				user_creation(textField.getText(),passwordField.getText());
+				
 			}
 		});
 		btnSignUp.addActionListener(new ActionListener() {
@@ -113,6 +114,9 @@ public class GUI extends JFrame {
 		btnRemoveUser.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				User loginuser=new User(textField.getText(),passwordField.getText());
+		    	loginuser.removeUser(loginuser,user_stack);
+				
 			}
 		});
 		btnRemoveUser.setFont(new Font("Comic Sans MS", Font.BOLD, 17));
