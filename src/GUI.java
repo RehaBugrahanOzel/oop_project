@@ -14,10 +14,14 @@ import java.awt.Color;
 import javax.swing.JTextPane;
 import java.awt.Canvas;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 public class GUI extends JFrame {
 
 	private JPanel contentPane;
+	private JPasswordField passwordField;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -53,7 +57,7 @@ public class GUI extends JFrame {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+				textField.getText();
 			}
 		});
 		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 17));
@@ -93,7 +97,26 @@ public class GUI extends JFrame {
 		txtpnTheatreManagementSystem.setBackground(new Color(204, 204, 204));
 		txtpnTheatreManagementSystem.setFont(new Font("Comic Sans MS", Font.BOLD, 39));
 		txtpnTheatreManagementSystem.setText("Theatre Management System");
-		txtpnTheatreManagementSystem.setBounds(163, 223, 563, 70);
+		txtpnTheatreManagementSystem.setBounds(151, 48, 563, 70);
 		contentPane.add(txtpnTheatreManagementSystem);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(372, 246, 313, 30);
+		contentPane.add(passwordField);
+		
+		textField = new JTextField();
+		textField.setBounds(372, 209, 313, 30);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("User Name: ");
+		lblNewLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 19));
+		lblNewLabel.setBounds(236, 205, 126, 30);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblPassword = new JLabel("Password: ");
+		lblPassword.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 19));
+		lblPassword.setBounds(236, 242, 116, 30);
+		contentPane.add(lblPassword);
 	}
 }

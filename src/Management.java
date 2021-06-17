@@ -10,6 +10,7 @@ public class Management {
 		User user = new User(user_name,password);
 		user_stack.push(user);
 	}
+	
 	public static void page1() {
 		Scanner myObj = new Scanner(System.in);
 	    System.out.println("1-Sign up");
