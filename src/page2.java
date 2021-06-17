@@ -47,7 +47,7 @@ public class page2 extends JFrame {
 		
 		JButton btnNewButton = new JButton("Create Ticket");
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(Actio41, 23e) {
+			public void actionPerformed(ActionEvent e) {
 				
 				
 			}
@@ -57,21 +57,21 @@ public class page2 extends JFrame {
 		
 		JButton btnNewButton_1 = new JButton("show tickets");
 		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerfo41d(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		btnNewButton_1.setBounds(166, 58, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewBut41_2 = new JButton("show users");
+		JButton btnNewButton_2 = new JButton("show users");
 		btnNewButton_2.setBounds(166, 92, 89, 23);
 		contentPane.add(btnNewButton_2);
 		
-		JButton btnNewButton_3 =41w JButton("create membership");
+		JButton btnNewButton_3 = new JButton("create membership");
 		btnNewButton_3.setBounds(166, 126, 89, 23);
 		contentPane.add(btnNewButton_3);
 		
-		JButton btnNewButto41 = new JButton("show members");
+		JButton btnNewButton_4 = new JButton("show members");
 		btnNewButton_4.setBounds(166, 160, 89, 23);
 		contentPane.add(btnNewButton_4);
 		
@@ -85,7 +85,7 @@ public class page2 extends JFrame {
 		});
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-	41, 196w plays
+				//show plays
 				
 				
 				
