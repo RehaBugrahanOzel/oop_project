@@ -13,24 +13,27 @@ public class Management {
 	
 	public static void page1() {
 		Scanner myObj = new Scanner(System.in);
+		Scanner myObj3 = new Scanner(System.in);
+		Scanner myObj2 = new Scanner(System.in);
 	    System.out.println("1-Sign up");
 	    System.out.println("2-Log in");
 	    System.out.println("3-Remove user");
-	    int choice = myObj.nextInt();
+	    int choice = myObj3.nextInt();
 	    if(choice==1) {
 	    	System.out.println("Enter user name: ");
 	    	String username = myObj.nextLine();
 	    	System.out.println("Enter password: ");
-	    	String password = myObj.nextLine();
+	    	String password = myObj2.nextLine();
 	    	user_creation(username, password);
 	    	System.out.println("User created");
+	    	choice=2;
 	    	
 	    }
 	    if(choice==2) {
 	    	System.out.println("Enter user name: ");
 	    	String username = myObj.nextLine();
 	    	System.out.println("Enter password: ");
-	    	String password = myObj.nextLine();
+	    	String password = myObj2.nextLine();
 	    	User loginuser=new User(username,password);
 	    	boolean isUser=false;
 	    	
@@ -51,7 +54,7 @@ public class Management {
 	    	System.out.println("Enter user name: ");
 	    	String username = myObj.nextLine();
 	    	System.out.println("Enter password: ");
-	    	String password = myObj.nextLine();
+	    	String password = myObj2.nextLine();
 	    	User loginuser=new User(username,password);
 	    	loginuser.removeUser(loginuser,user_stack);
 	    	System.out.println("User has been removed");
