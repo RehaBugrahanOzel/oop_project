@@ -8,4 +8,3 @@ The Little Mermaid;16;7;2021;15;30;Kids Hall
 Romeo and Juliet;4;7;2021;19;30;Main Hall
 Romeo and Juliet;11;7;2021;19;30;Main Hall
 Romeo and Juliet;18;7;2021;19;30;Main Hall
-

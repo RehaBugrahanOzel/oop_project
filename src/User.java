@@ -3,9 +3,9 @@ public class User {
 
 	String userName;
 	String password;
-	
+
 	public User(String userName, String password) {
-		
+
 		this.userName = userName;
 		this.password = password;
 	}
@@ -29,16 +29,13 @@ public class User {
 		for (int i = 0; i < size; i++) {
 			user_stack.push(temp.pop());
 		}
-		
+
 		if(flag==false) {
 			System.out.println("User doesn't exist or password is wrong");
 		}
-		/*else if(flag==true) {
-			System.out.println("ANAN YANÝ GÝRÝÞ");
-		}*/
 		return flag;
 	}
-	
+
 	public void removeUser (User user,Stack user_stack) {
 		Stack temp = new Stack();
 		int size = user_stack.size();

@@ -28,6 +28,8 @@ public class Play {
 		FileInputStream fis=new FileInputStream("plays.txt");       
 		Scanner sc=new Scanner(fis);    //file to be scanned  
 		//returns true if there is another line to read  
+		sc.nextLine();
+		
 		while(sc.hasNextLine())  
 		{  
 			String temp[] = sc.nextLine().split(";");
@@ -48,7 +50,14 @@ public class Play {
 		return play_stack;
 		
 	}
-	
-	
+	public String[] getShows(Stack plays) {
+		String [] shows=new String[100];
+		int stacksize=plays.size();
+		for (int i = 0; i < stacksize; i++) {
+			shows[i]=((Play)plays.elementAt(i)).showName+"-"+((Play)plays.elementAt(i)).date.day+"."+((Play)plays.elementAt(i)).date.month+"."+((Play)plays.elementAt(i)).date.year+"-"+((Play)plays.elementAt(i)).time.hour+"."+((Play)plays.elementAt(i)).time.minute+"-"+((Play)plays.elementAt(i)).hall;
+		}
+		return shows;
+		
+	}
 
 }
